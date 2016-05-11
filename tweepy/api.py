@@ -198,7 +198,7 @@ class API(object):
             :allowed_param:
         """
         f = kwargs.pop('file', None)
-        headers, post_data = API._pack_image(filename, 3072, form_field='media', f=f)
+        headers, post_data = API._pack_image(filename, 5000, form_field='media', f=f)
         kwargs.update({'headers': headers, 'post_data': post_data})
 
         return bind_api(
@@ -216,7 +216,7 @@ class API(object):
             :allowed_param:'status', 'possibly_sensitive', 'in_reply_to_status_id', 'in_reply_to_status_id_str', 'lat', 'long', 'place_id', 'display_coordinates'
         """
         f = kwargs.pop('file', None)
-        headers, post_data = API._pack_image(filename, 3072, form_field='media[]', f=f)
+        headers, post_data = API._pack_image(filename, 5000, form_field='media[]', f=f)
         kwargs.update({'headers': headers, 'post_data': post_data})
 
         return bind_api(
