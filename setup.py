@@ -2,7 +2,8 @@
 #from distutils.core import setup
 import re, uuid
 from setuptools import setup, find_packages
-from pip.req import parse_requirements
+from pip._internal.req import parse_requirements
+
 
 VERSIONFILE = "tweepy/__init__.py"
 ver_file = open(VERSIONFILE, "rt").read()
